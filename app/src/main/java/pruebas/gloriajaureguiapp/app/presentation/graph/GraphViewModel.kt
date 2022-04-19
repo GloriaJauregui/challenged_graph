@@ -11,6 +11,7 @@ import pruebas.gloriajaureguiapp.app.presentation.graph.GraphModel.Event
 import pruebas.gloriajaureguiapp.app.presentation.graph.GraphModel.Result
 import pruebas.gloriajaureguiapp.app.presentation.graph.GraphModel.SideEffect
 import pruebas.gloriajaureguiapp.app.presentation.graph.GraphModel.State
+import kotlin.collections.ArrayList
 
 /**
  * Llamado a los eventos.
@@ -48,7 +49,6 @@ class GraphViewModel(
             }
         }
     }
-
 
     override fun emitLoading(isLoading: Boolean, loadingTextRes: Int?) {
         emitState(state.copy(isLoading = isLoading))
