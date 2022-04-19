@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/graphFragment">
+
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="pruebas.gloriajaureguiapp.app.presentation.graph.GraphFragment"
+        android:label="@string/lbl_graph_title" />
+
+    <fragment
+        android:id="@+id/listTopFragment"
+        android:name="pruebas.gloriajaureguiapp.app.presentation.listTop.ListTopFragment"
+        android:label="@string/lbl_list_title" />
+
+</navigation>
