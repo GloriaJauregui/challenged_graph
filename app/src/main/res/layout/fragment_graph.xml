@@ -19,12 +19,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/dim_40"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_0"
+        android:layout_marginStart="@dimen/dim_24"
+        android:layout_marginEnd="@dimen/dim_24"
+        android:layout_marginBottom="@dimen/dim_56"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

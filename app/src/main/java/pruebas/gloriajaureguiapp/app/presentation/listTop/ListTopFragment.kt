@@ -10,6 +10,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import pruebas.gloriajaureguiapp.R
 import pruebas.gloriajaureguiapp.app.di.ListModule
 import pruebas.gloriajaureguiapp.app.utils.LoadingScreen
 import pruebas.gloriajaureguiapp.databinding.FragmentListBinding
@@ -71,6 +73,9 @@ class ListTopFragment : Fragment() {
             is SideEffect.ErrorShowList -> {
                 oldElements.clear()
                 setList(oldElements)
+                val snack = Snackbar.make(binding.root,getString(R.string.lbl_graph_error),
+                    Snackbar.LENGTH_LONG)
+                snack.show()
             }
         }
     }

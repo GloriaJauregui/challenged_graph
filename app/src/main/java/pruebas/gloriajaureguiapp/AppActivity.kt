@@ -21,7 +21,6 @@ class AppActivity : AppCompatActivity() {
         binding = ActivityAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setNavigationGraph()
-
     }
 
     private fun setNavigationGraph() {

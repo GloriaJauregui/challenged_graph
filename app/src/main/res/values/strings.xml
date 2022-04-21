@@ -2,17 +2,15 @@
     <string name="app_name">GloriaJaureguiApp</string>
     <string name="lbl_iv_description">Imagen</string>
     <string name="lbl_test">Texto de prueba</string>
-    <string name="lbl_detail">Detalles</string>
-    <string name="lbl_list_post">ListaPost</string>
-    <string name="lbl_comment">Total de comentarios: %s</string>
-    <string name="lbl_empty">No se encontraron datos</string>
-    <string name="lbl_comment_detail">Comentarios</string>
+    <string name="lbl_empty"></string>
 
     <!-- Login -->
     <string name="lbl_login_title">Sign in</string>
     <string name="lbl_login_description">Usar huella para acceder a la aplicación</string>
     <string name="msg_authentication_failed">Error en autenticación</string>
     <string name="msg_authentication_succeeded">Autenticación correcta</string>
+    <string name="lbl_used">Usar huella</string>
+    <string name="lbl_cancel">Cancelar</string>
 
     <!-- Lista -->
     <string name="lbl_list_title">Top Ten</string>
@@ -20,7 +18,8 @@
 
     <!-- Grafica -->
     <string name="lbl_graph_title">Gráfica IPC</string>
-
+    <string name="lbl_graph_description">Indice IPC</string>
+    <string name="lbl_graph_error">Error al obtener los datos.</string>
     <!-- Logout -->
     <string name="lbl_logout_title">Salir</string>
 </resources>

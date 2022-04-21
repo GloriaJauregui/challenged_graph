@@ -1,5 +1,6 @@
 package pruebas.gloriajaureguiapp.app.presentation.graph
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,8 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.google.android.material.snackbar.Snackbar
+import pruebas.gloriajaureguiapp.R
 import pruebas.gloriajaureguiapp.app.di.ListModule
 import pruebas.gloriajaureguiapp.databinding.FragmentGraphBinding
 import pruebas.gloriajaureguiapp.mvi.Base
@@ -23,6 +26,9 @@ import pruebas.gloriajaureguiapp.app.utils.LoadingScreen
 import pruebas.gloriajaureguiapp.apiservice.entities.GraphResultset
 import kotlin.collections.ArrayList
 
+/**
+ * Muestra el fragment con la gráfica.
+ */
 class GraphFragment : Fragment() {
 
     private var _binding: FragmentGraphBinding? = null
@@ -61,7 +67,8 @@ class GraphFragment : Fragment() {
                 setDataToLineChart(effect.result)
             }
             is SideEffect.ErrorShowData -> {
-                var a = "1"
+                val snack = Snackbar.make(binding.root,getString(R.string.lbl_graph_error),Snackbar.LENGTH_LONG)
+                snack.show()
             }
         }
     }
@@ -82,18 +89,19 @@ class GraphFragment : Fragment() {
         xAxis.setDrawAxisLine(false)
         binding.lineChart.axisRight.isEnabled = false
         binding.lineChart.legend.isEnabled = false
-        binding.lineChart.description.isEnabled = false
+        binding.lineChart.description.isEnabled = true
+        binding.lineChart.description.text = getString(R.string.lbl_graph_description)
         binding.lineChart.animateX(1000, Easing.EaseInSine)
         xAxis.position = XAxis.XAxisPosition.BOTTOM_INSIDE
         xAxis.valueFormatter = MyAxisFormatter()
         xAxis.setDrawLabels(true)
         xAxis.granularity = 1f
         xAxis.labelRotationAngle = +90f
+        xAxis.axisLineColor = Color.RED
     }
 
 
     inner class MyAxisFormatter : IndexAxisValueFormatter() {
-
         override fun getAxisLabel(value: Float, axis: AxisBase?): String {
             val index = value.toInt()
             return if (index < scoreList.size) {
@@ -111,11 +119,10 @@ class GraphFragment : Fragment() {
             val score = scoreList[i]
             entries.add(Entry(i.toFloat(), score.price.toFloat()))
         }
-        val lineDataSet = LineDataSet(entries, "Hola")
+        val lineDataSet = LineDataSet(entries, "")
         val data = LineData(lineDataSet)
         binding.lineChart.data = data
         binding.lineChart.invalidate()
     }
-
 }
 

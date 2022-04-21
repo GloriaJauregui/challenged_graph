@@ -10,21 +10,10 @@ import pruebas.gloriajaureguiapp.mvi.AppResponse
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * Contiene las llamadas a los servicios.
+ */
 class RemoteDataSourceImp : RemoteDataSource {
-
-    private fun getRetrofitListPost(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/posts/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-    private fun getRetrofitListComment(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/comments/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
 
     private fun getRetrofitListTop(): Retrofit {
         return Retrofit.Builder()

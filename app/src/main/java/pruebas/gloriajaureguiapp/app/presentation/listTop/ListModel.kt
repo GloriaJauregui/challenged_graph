@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 import pruebas.gloriajaureguiapp.mvi.Base
 
 /**
- * Contiene los estados, eventos, efectos para la lista de post.
+ * Contiene los estados, eventos, efectos para la lista.
  */
 class ListModel {
     @Parcelize

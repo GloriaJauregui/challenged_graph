@@ -67,12 +67,10 @@ class LoginFragment : Fragment() {
             })
 
         promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Login")
-            .setSubtitle("Usar huella")
-            .setNegativeButtonText("Cancelar")
+            .setTitle(getString(R.string.lbl_login_title))
+            .setSubtitle(getString(R.string.lbl_used))
+            .setNegativeButtonText(getString(R.string.lbl_cancel))
             .build()
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -82,7 +80,7 @@ class LoginFragment : Fragment() {
 
     private fun setListeners(){
         binding.ivBiometric.setOnClickListener {
-            biometricPrompt.authenticate(promptInfo)
+           biometricPrompt.authenticate(promptInfo)
         }
     }
 

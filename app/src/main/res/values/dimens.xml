@@ -10,4 +10,5 @@
     <dimen name="text_10">10sp</dimen>
     <dimen name="text_14">14sp</dimen>
     <dimen name="text_18">18sp</dimen>
+    <dimen name="text_30">30sp</dimen>
 </resources>

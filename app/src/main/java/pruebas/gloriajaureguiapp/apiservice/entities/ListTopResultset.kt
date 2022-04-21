@@ -24,3 +24,4 @@ enum class ValueType(val title: String) {
     @SerializedName("3")
     TYPE_VOLUME("Volumen")
 }
+

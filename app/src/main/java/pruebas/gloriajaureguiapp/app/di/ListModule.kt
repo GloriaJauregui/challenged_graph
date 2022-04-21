@@ -13,9 +13,8 @@ import pruebas.gloriajaureguiapp.app.presentation.listTop.ListViewModelFactory
 object ListModule {
 
     /**
-     * Proporciona una fábrica de construcción del viewModel de post.
-     * @return [providesListViewModelFactory] fabrica de ListViewModel.
-     * */
+     * Proporciona una fábrica de construcción del viewModel de lista.
+     */
     fun providesListViewModelFactory(
         defaultArgs: Bundle? = null
     ): ListViewModelFactory {
@@ -36,10 +35,9 @@ object ListModule {
     }
 
     /**
-     * Proporciona una fábrica de construcción del viewModel de post.
-     * @return [providesGraphDataViewModelFactory] fabrica de ListViewModel.
-     * */
-     fun providesGraphDataViewModelFactory(
+     * Proporciona una fábrica de construcción del viewModel de la gráfica.
+     */
+    fun providesGraphDataViewModelFactory(
         defaultArgs: Bundle? = null
     ): GraphViewModelFactory {
         return GraphViewModelFactory(
@@ -73,5 +71,4 @@ object ListModule {
      */
     private fun providesRemoteDataSource(): RemoteDataSource =
         RemoteDataSourceImp()
-
 }

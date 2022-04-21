@@ -7,7 +7,7 @@ import pruebas.gloriajaureguiapp.app.domain.repositories.DataRepository
 import pruebas.gloriajaureguiapp.mvi.AppResponse
 
 /**
- * Contiene todas las funcionalidades y llamadas referentes a los post.
+ * Contiene las respuestas a las llamdas a los servicios.
  */
 class RepositoryImp(val remoteDataSource: RemoteDataSource) : DataRepository {
 
